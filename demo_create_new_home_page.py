@@ -76,7 +76,7 @@ blocks = [
     *action_bubble_rows
 ]
 #
-slug = 'welcome-scripted'
+slug = 'home'
 
 data = {
     'o:slug': slug,
