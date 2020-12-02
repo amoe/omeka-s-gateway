@@ -22,6 +22,28 @@ post_slider_blurb = """
   community in Brighton & Hove.</p>
 """
 
+action_bubble_rows = [
+    {'o:attachment': [],
+     'o:data': {'color_scheme': 'accent1',
+                'content1': 'Lorem ipsum',
+                'content2': 'Lorem ipsum',
+                'heading1': 'Heading value 1',
+                'heading2': 'Heading value 2',
+                'hyperlink1': 'http://www.example1.com/',
+                'hyperlink2': 'http://www.example2.com/'},
+     'o:layout': 'qhsActionBubble'},
+    {'o:attachment': [],
+     'o:data': {'color_scheme': 'accent2',
+                'content1': 'Lorem ipsum',
+                'content2': 'Lorem ipsum',
+                'heading1': 'Heading value 3',
+                'heading2': 'Heading value 4',
+                'hyperlink1': 'http://www.example3.com/',
+                'hyperlink2': 'http://www.example4.com/'},
+     'o:layout': 'qhsActionBubble'}
+]
+
+
 blocks = [
     {'o:attachment': [{'o:caption': '',
                        'o:item': {'@id': 'http://omeka-s.steenvlieg.phys.solasistim.net/api/items/15',
@@ -33,7 +55,8 @@ blocks = [
                 'click_through_url_3': ''},
      'o:layout': 'qhsSlider'},
     {'o:attachment': [], 'o:data': {'html': 'This welcome page was created by a script.'},'o:layout': 'html'},
-    {'o:attachment': [], 'o:data': {'html': post_slider_blurb},'o:layout': 'html'}
+    {'o:attachment': [], 'o:data': {'html': post_slider_blurb},'o:layout': 'html'},
+    *action_bubble_rows
 ]
 
 slug = 'welcome-scripted'
