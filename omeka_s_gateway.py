@@ -58,9 +58,9 @@ class OmekaSGateway(object):
                 }
             ],
             "@type": "o:Item",
-            "o:item_set": [
-                {"o:id": item_set_id}
-            ],
+            # "o:item_set": [
+            #     {"o:id": item_set_id}
+            # ],
             "o:media" : [
                 {"o:ingester": "upload", "file_index": "0", "o:item": {},
                  "dcterms:title": [
