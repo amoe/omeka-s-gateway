@@ -17,16 +17,34 @@ site_link = {
 }
 
 post_slider_blurb = """
-<p>We are a heritage learning project celebrating and promoting the rich
-  cultural life of the Lesbian, Gay, Bisexual and Transgender (LGBT)
-  community in Brighton & Hove.</p>
+<div class="qhs-post-slider-blurb text-center">
+  <p>We are a heritage learning project celebrating and promoting the rich
+    cultural life of the Lesbian, Gay, Bisexual and Transgender (LGBT)
+    community in Brighton & Hove.</p>
+</div>
+"""
+
+lipsum = """
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in ante
+ante. Aliquam ultrices mi consequat eros pulvinar, porta ornare odio
+consequat. Quisque lectus felis, ultricies nec nibh in, blandit ullamcorper
+enim. Nam vel neque non enim rutrum varius. Suspendisse tempor massa elit, ut
+tincidunt neque euismod sit amet. Sed fringilla auctor venenatis. Vestibulum eu
+consectetur quam. Aenean lorem purus, hendrerit ac odio vel, posuere placerat
+enim.
+"""
+
+email_form_markup = """
+<input class="form-control qhs-input" placeholder="Name"></input>
+<input class="form-control qhs-input" placeholder="Email"></input>
+<button type="submit" class="btn btn-default qhs-submit">Submit</button>
 """
 
 action_bubble_rows = [
     {'o:attachment': [],
      'o:data': {'color_scheme': 'accent1',
-                'content1': 'Lorem ipsum',
-                'content2': 'Lorem ipsum',
+                'content1': lipsum,
+                'content2': lipsum,
                 'heading1': 'Heading value 1',
                 'heading2': 'Heading value 2',
                 'hyperlink1': 'http://www.example1.com/',
@@ -34,8 +52,8 @@ action_bubble_rows = [
      'o:layout': 'qhsActionBubble'},
     {'o:attachment': [],
      'o:data': {'color_scheme': 'accent2',
-                'content1': 'Lorem ipsum',
-                'content2': 'Lorem ipsum',
+                'content1': email_form_markup,
+                'content2': lipsum,
                 'heading1': 'Heading value 3',
                 'heading2': 'Heading value 4',
                 'hyperlink1': 'http://www.example3.com/',
@@ -54,11 +72,10 @@ blocks = [
                 'click_through_url_2': '',
                 'click_through_url_3': ''},
      'o:layout': 'qhsSlider'},
-    {'o:attachment': [], 'o:data': {'html': 'This welcome page was created by a script.'},'o:layout': 'html'},
     {'o:attachment': [], 'o:data': {'html': post_slider_blurb},'o:layout': 'html'},
     *action_bubble_rows
 ]
-
+#
 slug = 'welcome-scripted'
 
 data = {
