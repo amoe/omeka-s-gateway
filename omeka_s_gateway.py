@@ -23,11 +23,20 @@ class OmekaSGateway(object):
         r = requests.post(self.get_final_uri(endpoint), json=data)
         return r
 
+    def get_page_by_slug(self, slug):
+        return next((x for x in self.list_site_pages() if x['o:slug'] == slug), None)
+
+    def update_page(self, id_, data):
+        endpoint = "{}/api/site_pages/{}?key_identity={}&key_credential={}"
+        requests.put(
+            endpoint.format(self.install_location, id_, self.key_identity, self.key_credential),
+            json=data
+        )
 
     def list_site_pages(self):
         final_uri = self.get_final_uri("{}/api/site_pages?key_identity={}&key_credential={}")
         r = requests.get(final_uri)
-        return r
+        return r.json()
 
     def create_item_with_media(self, *, item_set_id):
         endpoint = "{}/api/items?key_identity={}&key_credential={}"
