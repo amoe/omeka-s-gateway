@@ -40,13 +40,16 @@ email_form_markup = """
 <button type="submit" class="btn btn-default qhs-submit">Submit</button>
 """
 
+
+
+
 action_bubble_rows = [
     {'o:attachment': [],
      'o:data': {'color_scheme': 'accent1',
                 'content1': lipsum,
                 'content2': lipsum,
-                'heading1': 'Heading value 1',
-                'heading2': 'Heading value 2',
+                'heading1': 'Contribute to the Archive&nbsp;&rsaquo;',
+                'heading2': 'Search the Archive&nbsp;&rsaquo;',
                 'hyperlink1': 'http://www.example1.com/',
                 'hyperlink2': 'http://www.example2.com/'},
      'o:layout': 'qhsActionBubble'},
@@ -54,8 +57,8 @@ action_bubble_rows = [
      'o:data': {'color_scheme': 'accent2',
                 'content1': email_form_markup,
                 'content2': lipsum,
-                'heading1': 'Heading value 3',
-                'heading2': 'Heading value 4',
+                'heading1': 'Subscribe to our Newsletter&nbsp;&rsaquo;',
+                'heading2': 'Create an Exhibition&nbsp;&rsaquo;',
                 'hyperlink1': 'http://www.example3.com/',
                 'hyperlink2': 'http://www.example4.com/'},
      'o:layout': 'qhsActionBubble'}
@@ -81,7 +84,7 @@ slug = 'home'
 data = {
     'o:slug': slug,
     'o:site': site_link,
-    'o:title': "Welcome (Scripted)",
+    'o:title': "Home",
     'o:block': blocks
 }
 
