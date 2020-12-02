@@ -36,5 +36,4 @@ if response is None:
 else:
     gtw.update_page(response['o:id'], data)
 
-pprint.pprint(gtw.get_page_by_slug(slug))
-    
+pprint.pprint(gtw.get_page_by_slug(slug))   
