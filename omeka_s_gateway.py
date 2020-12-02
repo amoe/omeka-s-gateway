@@ -8,6 +8,27 @@ class OmekaSGateway(object):
         self.key_identity = key_identity
         self.key_credential = key_credential
 
+    def get_final_uri(self, endpoint):
+        return endpoint.format(
+            self.install_location,
+            self.key_identity,
+            self.key_credential
+        )
+        
+    def create_page(self, data):
+        endpoint = "{}/api/site_pages?key_identity={}&key_credential={}"
+        item_payload = {
+        }
+        final_uri = endpoint.format(self.install_location, self.key_identity, self.key_credential)
+        r = requests.post(self.get_final_uri(endpoint), json=data)
+        return r
+
+
+    def list_site_pages(self):
+        final_uri = self.get_final_uri("{}/api/site_pages?key_identity={}&key_credential={}")
+        r = requests.get(final_uri)
+        return r
+
     def create_item_with_media(self, *, item_set_id):
         endpoint = "{}/api/items?key_identity={}&key_credential={}"
         postdata = {}
