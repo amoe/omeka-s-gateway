@@ -1,5 +1,7 @@
 # omeka-s-gateway
 
+This is far from industrial strength, please do not rely on it.
+
 # /connection_details.py
 
     sites = {

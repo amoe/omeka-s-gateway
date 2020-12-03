@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="omeka-s-gateway",
-    version="0.0.1",
+    version="0.0.4",
     author="David Banks",
     author_email="amoebae@gmail.com",
     description="Omeka-S REST API wrapper",
