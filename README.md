@@ -6,7 +6,7 @@ was developed as part of the Queer Heritage South digital archive project.
 
 This is far from industrial strength, please do not rely on it.
 
-# /connection_details.py
+## /connection_details.py
 
     sites = {
         'steenvlieg': {
